@@ -9,11 +9,12 @@ negativeNumsSum = 0
 
 while True:
     strNum = input()
-    try:
-        num = int(strNum)
 
-        if num == 0:
-            break
+    if strNum == '0':
+        break
+
+    try:
+        num = float(strNum)
 
         if num > 0:
             positiveNumsSum += num

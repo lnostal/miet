@@ -4,7 +4,7 @@
 
 import os
 import string
-import numpy as np
+import numpy
 
 
 def openFile(fileName):
@@ -26,7 +26,7 @@ def getDataFromFile(file):
 listOfWords_1 = getDataFromFile('/input_1.txt')
 listOfWords_2 = getDataFromFile('/input_2.txt')
 
-repeated = np.intersect1d(listOfWords_1, listOfWords_2)
+repeated = numpy.intersect1d(listOfWords_1, listOfWords_2)
 repStr = ' '.join(repeated)
 
 with open(os.path.dirname(os.path.abspath(__file__)) + '/output.txt', "w") as file:

@@ -4,16 +4,21 @@
 
 import os
 import re
+import numpy
 
-textFromFile = list()
+textFromFile = []
 
 with open(os.path.dirname(os.path.abspath(__file__)) + '/input.txt', "r") as file:
     content = file.read()
     textFromFile = content.replace('\n',' ').split(' ')
 
-textFromFileWithoutEmpties = list(filter(None, textFromFile))
+regexp = re.compile(r'^-?[0-9].?[0-9]*?$')
+numbers = [float(i) for i in textFromFile if regexp.search(i)]
 
-s = ' '.join(textFromFileWithoutEmpties[:10])
+m = 0.0;
+
+if len(numbers) != 0:
+    m = numpy.prod(numbers[:10])
 
 with open(os.path.dirname(os.path.abspath(__file__)) + '/output.txt', "w") as file:
-    print(s, file=file)
+    print(m, file=file)

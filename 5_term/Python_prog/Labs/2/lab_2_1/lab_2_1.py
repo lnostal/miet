@@ -18,7 +18,8 @@ numbers = [i for i in textFromFileWithoutEmpties if regexp.search(i)]
 
 numbers = list(map(int, numbers))
 
-print("max: {0}\nmin: {1}".format(max(numbers), min(numbers)))
-
 with open(os.path.dirname(os.path.abspath(__file__)) + '/output.txt', "w") as file:
-    print("max: {0}\nmin: {1}".format(max(numbers), min(numbers)), file=file)
+    if len(numbers) != 0:
+        print("max: {0}\nmin: {1}".format(max(numbers), min(numbers)), file=file)
+    else:
+        print("",file=file)

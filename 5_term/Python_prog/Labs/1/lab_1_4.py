@@ -5,7 +5,7 @@
 
 def checkIfLeap(year):
 
-    if (year % 400 == 0) and (year % 100 == 0) or (year % 4 == 0) and (year % 100 != 0):
+    if year % 4 == 0 and year % 100 != 0 or year % 4 == 0 and year % 400 == 0:
         print("это високосный год")
     else:
         print("это обычный год")
@@ -18,3 +18,7 @@ try:
     checkIfLeap(int(yearString))
 except:
     print("wrong input")
+
+
+
+    

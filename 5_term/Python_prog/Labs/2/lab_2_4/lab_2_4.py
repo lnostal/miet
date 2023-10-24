@@ -5,7 +5,7 @@
 # файлах различной длины.
 
 # TODO: переписать алгоритм на построчное считывание, т.к. считывание 
-#       всего файла в память может привести к переполнению
+#       всего файла в память может привести к переполнению оной
 
 import os
 import sys
@@ -15,8 +15,8 @@ def openFile(fileName):
         return file.read()
     
 def writeToFile(fileName, data):
-    with open(os.path.dirname(os.path.abspath(__file__)) + "/" + fileName, "r") as file:
-        print(datafile=file)
+    with open(os.path.dirname(os.path.abspath(__file__)) + "/" + fileName, "w") as file:
+        print(data,file=file)
 
 whitelist = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
 
@@ -47,6 +47,6 @@ def main():
     data = openFile(fileName)
     rate = analyzeData(data)
 
-    print(rate)
+    writeToFile('output.txt', rate)
 
 main()

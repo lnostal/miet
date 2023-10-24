@@ -17,6 +17,6 @@ if len(separatedFio) != 2 or regexp.search(fio):
     print("wrong input")
 else:
     for s in separatedFio:
-        initials += s[0] + ". "
+        initials += s[0] + "."
 
     print(initials.upper())

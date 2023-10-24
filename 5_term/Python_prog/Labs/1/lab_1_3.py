@@ -14,8 +14,6 @@ for n in arr:
     except ValueError:
         continue
 
-print("list:\t", onlyNumbers)
-
 setOfNumbers = set(onlyNumbers)
 
 print("set:\t", setOfNumbers)

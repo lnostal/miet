@@ -13,6 +13,4 @@ def getMonthById(id):
     else:
         return "wrong input"
 
-print(getMonthById(6))
-
-# можно также решить через Enum и/или библиотеки работы с датами, но в условиях текущей задачи это был бы овераркитект
+print(getMonthById(6)) # Июнь
