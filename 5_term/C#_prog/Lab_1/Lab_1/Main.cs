@@ -127,28 +127,28 @@ void someAction(Student st){
 Создать один объект типа Student, преобразовать данные в текстовый
 вид с помощью метода ToShortString() и вывести данные.
 */
-//var student = new Student();
-//PrintStudent(student);
+var student = new Student();
+PrintStudent(student);
 
 /*
 Вывести значения индексатора для значений индекса Education.Specialist,
 Education.Bachelor и Education.SecondEducation.
 */
-//CheckEducation(student);
+CheckEducation(student);
 
 /*
 Присвоить значения всем определенным в типе Student свойствам,
 преобразовать данные в текстовый вид с помощью метода ToString() и
 вывести данные.
 */
-//SetVars(student);
+SetVars(student);
 
 /*
 C помощью метода AddExams( params Exam*+ ) добавить элементы в
 список экзаменов и вывести данные объекта Student, используя метод
 ToString().
 */
-//AddExams(student);
+AddExams(student);
 
 /*
 Сравнить время выполнения операций с элементами одномерного,
@@ -158,5 +158,5 @@ ToString().
 Значения nrow и ncolumn вводятся в процессе работы приложения в виде
 одной строки с разделителями. 
 */
-//CompareTicks();
+CompareTicks();
 
