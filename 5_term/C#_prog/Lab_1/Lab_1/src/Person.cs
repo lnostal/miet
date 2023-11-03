@@ -1,6 +1,6 @@
 public class Person{
-    private readonly string _name;
-    private readonly string _surname;
+    private string _name;
+    private string _surname;
     private DateTime _birthday;
 
     public Person(string name, string surname, DateTime birthday){
@@ -17,27 +17,30 @@ public class Person{
 
     public string Name {
         get { return _name; }
+        set { _name = value; }
     }
 
     public string Surname {
         get { return _surname; }
+        set { _surname = value; }
     }
 
     public DateTime Birthday {
         get { return _birthday; }
+        set { _birthday = value; }
     }
 
-    public int Year {
+    public int BirthYear {
         get { return _birthday.Year; }
         set { _birthday = new DateTime(value, _birthday.Month, _birthday.Day); }
     }
 
     public override string ToString() {
-        return String.Format("class <{0}>:\n\tname:\t\t{1}\n\tsurname:\t{2}\n\tbirthay:\t{3}",base.ToString(), Name, Surname, Birthday);
+        return String.Format("class <{0}>:\n\tname:\t\t{1}\n\tsurname:\t{2}\n\tbirthay:\t{3}",base.ToString(), _name, _surname, _birthday);
     }
 
     public virtual string ToShortString() {
-        return String.Format("{0} {1}", Name, Surname);
+        return String.Format("{0} {1}", _name, _surname);
     }
 
 }

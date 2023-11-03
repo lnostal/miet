@@ -1,8 +1,3 @@
-
-
-using System.Linq.Expressions;
-using System.Security.Cryptography.X509Certificates;
-
 public class Student {
     private Person _person;
     private Education _education;
@@ -30,40 +25,37 @@ public class Student {
     }
 
     public Student(Person person, Education education, int group){
-        Per = person;
-        Ed = education;
-        GroupNumber = group;
+        _person = person;
+        _education = education;
+        _group = group;
     }
 
     public Student(){
-        Per = new Person();
-        Ed = Education.Specialist;
-        GroupNumber = 1;
-        Exams = new[] { new Exam(), new Exam() };
+        _person = new Person();
+        _education = Education.Specialist;
+        _group = 1;
+        _exams = new[] { new Exam(), new Exam() };
     }
 
     public double MeanScore{
         get { 
-            double sum = Exams.Sum(x => x.Score);            
-            return sum / Exams.Length; }
+            double sum = _exams.Sum(x => x.Score);            
+            return sum / _exams.Length; }
     }
 
     public bool this [Education ed] {
-        get { return Ed == ed; }
+        get { return _education == ed; }
     }
 
     public void AddExams (params Exam[] exams) {
-        Exams = Exams.Concat(exams).ToArray();
+        Exams = _exams.Concat(exams).ToArray();
     }
 
     public override string ToString()
     {
-        string className = base.ToString();
-        string person = Per.ToString();
-        string education = Ed.ToString();
         string exams = "";
 
-        foreach (var e in Exams) {
+        foreach (var e in _exams) {
             exams += "\t" + e.ToString() + "\n";
         }
 
@@ -74,7 +66,7 @@ public class Student {
             Group:  {3}
             Exams:  
             {4}
-        """, className, person, education, GroupNumber, exams);
+        """, base.ToString(), _person, _education, _group, exams);
     }
 
     public virtual string ToShortString(){
@@ -84,7 +76,7 @@ public class Student {
             Ed:         {2}
             Group:      {3}
             MeanScore:  {4}
-        """, base.ToString(), Per.ToString(), Ed.ToString(), GroupNumber, MeanScore);
+        """, base.ToString(), _person, _education, _group, MeanScore);
     }
 }
 
