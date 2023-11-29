@@ -2,6 +2,10 @@
 /5_term/Python_prog/Labs/l2/lab_2_4/not_for_share.*
 *.pages
 *.zip
+*.png
+5_term/UI:UX/old/
+__pycache__
+*.pdf
 
 
 ## for c# projects ignore
