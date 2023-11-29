@@ -1,0 +1,17 @@
+Subject:MIME-Version:Content-Type:List-Unsubscribe:List-Unsubscribe-Post
+
+Subject:MIME-Version:Content-Type:List-Unsubscribe:List-Unsubscribe-Post:Feedback-ID
+
+Subject: Hi from Python\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed \r\n\tboundary="----=_Part_25891_2059874432.1700900918406"\r\nX-MAILSLURP-USER-ID: f38c94bc-b0fa-4704-ba30-5fd95688e9ee\r\nX-MAILSLURP-INBOX-ID: b8677961-20ca-4ba2-8c77-8bd4961b3af4\r\nX-MAILSLURP-SENT-ID: c3dd835c-4248-436e-ae91-c2042642a6c9\r\nList-Unsubscribe: <mailto:unsubscribe@mailslurplist.link?subject=eyJ1c2VySWQiOiJmMzhjOTRiYy1iMGZhLTQ3MDQtYmEzMC01ZmQ5NTY4OGU5ZWUiLCJpbmJveElkIjoiYjg2Nzc5NjEtMjBjYS00YmEyLThjNzctOGJkNDk2MWIzYWY0Iiwic2VudEVtYWlsSWQiOiJjM2RkODM1Yy00MjQ4LTQzNmUtYWU5MS1jMjA0MjY0MmE2YzkiLCJyZWNpcGllbnQiOiJiODY3Nzk2MS0yMGNhLTRiYTItOGM3Ny04YmQ0OTYxYjNhZjRAbWFpbHNsdXJwLm14In0>, <https://api.mailslurp.com/account/unsubscribe-address?e=Yjg2Nzc5NjEtMjBjYS00YmEyLThjNzctOGJkNDk2MWIzYWY0QG1haWxzbHVycC5teA%3D%3D>\r\nList-Unsubscribe-Post: List-Unsubscribe=One-Click\r\nFeedback-ID: 1.us-west-2.xVmM3nkKyQQByFtLf8LXG4qOZ1svlccOUe4mIXMga4I=:AmazonSES\r\nX-SES-Outgoing: 2023.11.25-54.240.27.25\r\n\r\n------=_Part_25891_2059874432.1700900918406\r\nContent-Type: multipart/alternative
+.us-west-2.xVmM3nkKyQQByFtLf8LXG4qOZ1svlccOUe4mIXMga4I=:AmazonSES\r\nX-SES-Outgoing: 2023.11.25-54.240.27.92\r\n\r\n------=_Part_25885_878291171.1700900734447\r\nContent-Type: multipart/alternative; \r\n\tboundary="----=_Part_25884_1607348431.1700900734447"\r\n\r\n------=_Part_25884_1607348431.1700900734447\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: 7bit\r\n\r\nololo\r\n\r\n------=_Part_25884_1607348431.1700900734447--\r\n\r\n------=_Part_25885_878291171.1700900734447--\r\n'
+
+
+
+(?<=Subject: )(([A-Za-z0-9]+( |)+)+)(?=\\r)
+
+(?<=Content-Transfer-Encoding: 7bit\\r\\n\\r\\n)(([A-Za-z0-9]+( |)+)+)(?=\\r)
+
+"(?<={})(([A-Za-z0-9]+( |)+)+)(?=\\r)".format()
+
+электронная почта:
+^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$ 
