@@ -4,15 +4,14 @@
 # Выполните задание в одном и в нескольких потоках.
 
 import os
-import sys
 from time import perf_counter
 from threading import Thread
 
 files_txt = []
 files_with_key = []
 
-#for root, dirs, files in os.walk(os.path.dirname(os.path.abspath(__file__))):
-for root, dirs, files in os.walk("/Users/nosta/Documents/study"):
+for root, dirs, files in os.walk(os.path.dirname(os.path.abspath(__file__))):
+#for root, dirs, files in os.walk("/Users/nosta/Documents/study"):
     for file in files:
         if file.endswith(".txt"):
              files_txt.append(os.path.join(root, file))
@@ -51,12 +50,5 @@ many_threads()
 end_time2 = perf_counter()
 
 
-
-
 print(f'\n\nПоследовательное выполнение заняло {end_time - start_time: 0.6f} секунд.')
 print(f'Параллельное выполнение заняло {end_time2 - start_time2: 0.6f} секунд.')
-
-# if len(sys.argv) > 1:
-#     one_thread()
-# else:
-#     many_threads()

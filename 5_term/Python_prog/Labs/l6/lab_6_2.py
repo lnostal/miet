@@ -18,14 +18,16 @@ urls = [
 from urllib.request import urlopen
 from time import perf_counter
 from threading import Thread
-
-
+import certifi
 
 def task(url, id):
     print(f'\nНачинаем выполнение задачи {id} {url}...')
-    u = urlopen(url)
-    mysite = u.read()    
-    print(f'Задача {id} выполнена')
+    try:
+        u = urlopen(url, cafile=certifi.where())
+        mysite = u.read()    
+        print(f'Задача {id} выполнена')
+    except:
+        print("Ошибка при загрузке", url)
 
 
 def one_thread():
