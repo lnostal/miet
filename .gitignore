@@ -1,4 +1,6 @@
 .DS_Store
+/5_term/Python_prog
+/5_term/UI:UX
 /5_term/Python_prog/Labs/l2/lab_2_4/not_for_share.*
 *.pages
 *.zip
@@ -6,6 +8,10 @@
 5_term/UI:UX/old/
 __pycache__
 *.pdf
+.vscode
+env
+build
+*.dSYM
 
 
 ## for c# projects ignore
