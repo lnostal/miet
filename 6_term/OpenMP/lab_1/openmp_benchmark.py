@@ -1,3 +1,4 @@
+
 from subprocess import PIPE, run
 
 def run_script(script, n,m):
@@ -11,16 +12,15 @@ def run_script(script, n,m):
 def get_speed(rows):
     output_rows = rows.split("\n")
     last_row = output_rows[len(output_rows)-2]
-    speed = float(last_row.split(" ")[-1])
+    speed = float(last_row.split(" ")[-1].replace(",","."))
 
     return speed
 
 
 def computing(script):
     num_of_runs = 5
-
     matrix_n = 10
-    matrix_m = 20
+    matrix_m = 100
 
     for i in range(5):
         
@@ -30,16 +30,14 @@ def computing(script):
             parallel_speed += run_script(script, matrix_n, matrix_m)
         
         parallel_speed /=num_of_runs
-        if i < 2:
-            print("Matrix {}x{}, \t\tmean speed: {:.6f}".format(matrix_n, matrix_m, parallel_speed))
-        else:
-            print("Matrix {}x{}, \tmean speed: {:.6f}".format(matrix_n, matrix_m, parallel_speed))
+        
+        print("Matrix {}x{}, \tmean speed: {:.6f}".format(matrix_n, matrix_m, parallel_speed))
 
         matrix_m *=10
 
 
-parallel_script = "src/parallel"
-nonparallel_script = "src/without_parallel"
+parallel_script = "lab1_parallel.exe"
+nonparallel_script = "lab1.exe"
 
 print("\nParallel script\n\n")
 computing(parallel_script)
