@@ -37,7 +37,6 @@ int main(int argc, char* argv[])
 
 #pragma omp parallel shared(matrix) private(i)
     {
-        
         #pragma omp for private (j,count)
         for (i = 0; i < n; i++) {
             count = 0;

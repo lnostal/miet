@@ -32,24 +32,20 @@ int main(int argc, char* argv[])
 
     std::chrono::steady_clock::time_point start_time = std::chrono::steady_clock::now();
 
-    // создаем общие переменные для параллельного выполнения
     int i, j, count;
 
-
-        for (i = 0; i < n; i++) {
-            count = 0;
-            
-            for (j = 0; j < m - 1; j++) {
-                int num = matrix[i][j] + matrix[i][j + 1];
-                while (num) {
-                    if (num % 10 == 7)
-                        count++;
-                    num /= 10;
-                }
-
+    for (i = 0; i < n; i++) {
+        count = 0;        
+        for (j = 0; j < m - 1; j++) {
+            int num = matrix[i][j] + matrix[i][j + 1];
+            while (num) {
+                if (num % 10 == 7)
+                    count++;
+                num /= 10;
             }
-            printf("Cтрока %u:\tСемерок: %u\tТредов:%u\n", i + 1, count, omp_get_num_threads());
-           
+        }
+
+        printf("Cтрока %u:\tСемерок: %u\tТредов:%u\n", i + 1, count, omp_get_num_threads());
     }
    
     std::chrono::steady_clock::time_point end_time = std::chrono::steady_clock::now();
