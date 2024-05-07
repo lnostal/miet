@@ -12,6 +12,10 @@ __pycache__
 env
 build
 *.dSYM
+*.doc
+*.docx
+*.jpeg
+*.html
 
 
 ## for c# projects ignore
