@@ -16,6 +16,7 @@ build
 *.docx
 *.jpeg
 *.html
+*.rtf
 
 
 ## for c# projects ignore
