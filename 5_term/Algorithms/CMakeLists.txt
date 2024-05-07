@@ -1,34 +1,14 @@
 cmake_minimum_required(VERSION 3.11)
-set(CONAN_DISABLE_CHECK_COMPILER True)
 
 # проект и версия
-project(examples CXX)
+project(linux_lab2 C CXX)
 # поддержкa стандарта С++ 20
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_C_STANDARD 17)
+set(CMAKE_C_COMPILER /opt/homebrew/Cellar/gcc/13.2.0/bin/gcc-13)
+set(CMAKE_CXX_COMPILER /opt/homebrew/Cellar/gcc/13.2.0/bin/g++-13)
 
-# сгенерированный скрипт conanbuildinfo.cmake, созданный Conan
-include(env/conanbuildinfo.cmake)
-# настраиваем СMake на работу с библиотеками, установленными Conan
-conan_basic_setup()
-
-# подключение boost
-find_package(Boost 1.78.0 REQUIRED)
-if(Boost_FOUND)
-  include_directories(${Boost_INCLUDE_DIRS})
-endif()
-
-set(CMAKE_CXX_COMPILER_FORCED True)
-
-
-# подключение библиотеки pthread для кроссплатформенности //linux
-set(THREADS_PREFER_PTHREAD_FLAG ON)
-find_package(Threads REQUIRED)
-
-# темы
-add_executable(lab_1 src/lab_1.cpp)
-
-# библиотека для поддержки потоков
-target_link_libraries(lab_1 PRIVATE Threads::Threads dl)
+add_executable(lab1 src/lab1.cpp)
 
 
 
